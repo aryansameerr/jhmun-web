@@ -7,30 +7,31 @@
 .committee-full-card {
   position: relative;
   background: var(--c-surface-2);
-  border: 1px solid var(--c-border);
-  border-radius: var(--radius-lg);
+  border: 1.5px solid var(--c-border);
+  border-radius: 0;
   padding: 24px;
   display: grid;
   grid-template-columns: 240px 1fr;
   gap: 32px;
-  transition: var(--transition);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
   overflow: hidden;
   cursor: pointer;
+  box-shadow: 4px 4px 0px var(--c-primary-dark);
 }
 
 .committee-full-card::before {
   content: '';
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at 90% 10%, rgba(74, 222, 128, 0.04), transparent 60%);
+  background: radial-gradient(circle at 90% 10%, rgba(26, 89, 43, 0.1), transparent 60%);
   pointer-events: none;
   z-index: 1;
 }
 
 .committee-full-card:hover {
-  border-color: rgba(74, 222, 128, 0.35);
-  transform: translateY(-6px);
-  box-shadow: 0 28px 72px rgba(0, 0, 0, 0.6);
+  border-color: var(--c-primary-light);
+  transform: translate(-3px, -3px);
+  box-shadow: 7px 7px 0px var(--c-primary);
 }
 
 /* Poster Styling */

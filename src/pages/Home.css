@@ -353,27 +353,28 @@
 .committee-card {
   position: relative;
   background: var(--c-surface-2);
-  border: 1px solid var(--c-border);
-  border-radius: var(--radius-md);
+  border: 1.5px solid var(--c-border);
+  border-radius: 0;
   padding: 0;
   display: flex;
   flex-direction: column;
-  transition: var(--transition);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
   overflow: hidden;
   cursor: pointer;
+  box-shadow: 4px 4px 0px var(--c-primary-dark);
 }
 .committee-card::after {
   content: '';
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at 80% 20%, rgba(74, 222, 128, 0.04), transparent 60%);
+  background: radial-gradient(circle at 80% 20%, rgba(26, 89, 43, 0.1), transparent 60%);
   pointer-events: none;
   z-index: 1;
 }
 .committee-card:hover {
-  border-color: rgba(74, 222, 128, 0.35);
-  transform: translateY(-6px);
-  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.6), 0 0 16px rgba(74, 222, 128, 0.1);
+  border-color: var(--c-primary-light);
+  transform: translate(-3px, -3px);
+  box-shadow: 7px 7px 0px var(--c-primary);
 }
 .committee-card__poster-wrap {
   position: relative;
@@ -556,12 +557,6 @@
   display: flex;
   flex-direction: column;
   gap: 12px;
-  transition: var(--transition);
-}
-.why-card:hover {
-  border-color: rgba(2, 89, 45, 0.5);
-  transform: translateY(-4px);
-  box-shadow: 0 20px 60px rgba(0,0,0,0.5);
 }
 .why-card__icon { font-size: 32px; }
 .why-card__title {

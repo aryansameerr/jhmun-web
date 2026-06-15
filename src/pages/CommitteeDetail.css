@@ -192,14 +192,16 @@
 }
 .chair-card {
   background: var(--c-surface-2);
-  border: 1px solid var(--c-border);
-  border-radius: var(--radius-md);
+  border: 1.5px solid var(--c-border);
+  border-radius: 0;
   overflow: hidden;
-  transition: var(--transition);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 4px 4px 0px var(--c-primary-dark);
 }
 .chair-card:hover {
-  border-color: rgba(2, 89, 45, 0.5);
-  transform: translateY(-4px);
+  border-color: var(--c-primary-light);
+  transform: translate(-3px, -3px);
+  box-shadow: 7px 7px 0px var(--c-primary);
 }
 .chair-card__photo-wrap {
   position: relative;
@@ -326,13 +328,15 @@
   gap: 16px;
   padding: 18px 20px;
   background: var(--c-surface-2);
-  border: 1px solid var(--c-border);
-  border-radius: var(--radius-sm);
-  transition: var(--transition);
+  border: 1.5px solid var(--c-border);
+  border-radius: 0;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 3px 3px 0px var(--c-primary-dark);
 }
 .cd-resource-card:hover {
-  border-color: rgba(2, 89, 45, 0.5);
-  transform: translateX(4px);
+  border-color: var(--c-primary-light);
+  transform: translate(-2px, -2px);
+  box-shadow: 5px 5px 0px var(--c-primary);
 }
 .cd-resource-card__icon { font-size: 20px; flex-shrink: 0; }
 .cd-resource-card > div { flex: 1; overflow: hidden; }

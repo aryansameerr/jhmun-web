@@ -38,12 +38,12 @@
 html { scroll-behavior: smooth; font-size: 16px; }
 body {
   font-family: var(--font-body);
-  background-color: var(--c-black);
+  background-color: #020703; /* Deepest green-black */
   background-image: 
-    radial-gradient(rgba(74, 222, 128, 0.12) 1.5px, transparent 1.5px),
-    linear-gradient(rgba(2, 89, 45, 0.08) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(2, 89, 45, 0.08) 1px, transparent 1px);
-  background-size: 16px 16px, 48px 48px, 48px 48px;
+    linear-gradient(rgba(2, 89, 45, 0.12) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(2, 89, 45, 0.12) 1px, transparent 1px),
+    radial-gradient(rgba(74, 222, 128, 0.05) 1.5px, transparent 1.5px);
+  background-size: 40px 40px, 40px 40px, 10px 10px;
   color: var(--c-text);
   min-height: 100vh;
   overflow-x: hidden;
@@ -109,17 +109,18 @@ body::before {
 .badge {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  padding: 5px 14px;
-  background: rgba(2, 89, 45, 0.15);
-  border: 1px solid rgba(2, 89, 45, 0.4);
-  border-radius: 100px;
+  gap: 8px;
+  padding: 6px 14px;
+  background: rgba(2, 89, 45, 0.18);
+  border: 1.5px solid var(--c-primary);
+  border-radius: 0;
   font-family: var(--font-ui);
-  font-size: 12px;
-  font-weight: 500;
-  letter-spacing: 1px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 2px;
   text-transform: uppercase;
-  color: #4ade80;
+  color: var(--c-text-dim);
+  box-shadow: 3px 3px 0px var(--c-primary-dark);
 }
 
 /* BUTTONS */
@@ -128,53 +129,50 @@ body::before {
   align-items: center;
   gap: 8px;
   padding: 14px 32px;
-  border-radius: var(--radius-sm);
+  border-radius: 0;
   font-family: var(--font-ui);
   font-size: 14px;
   font-weight: 600;
   letter-spacing: 0.5px;
-  transition: var(--transition);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
   position: relative;
   overflow: hidden;
+  border: 1.5px solid var(--c-border);
 }
-.btn::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: rgba(255,255,255,0.08);
-  opacity: 0;
-  transition: var(--transition);
-}
-.btn:hover::before { opacity: 1; }
 
 .btn--primary {
   background: var(--c-primary);
   color: var(--c-white);
-  box-shadow: 0 0 24px rgba(2, 89, 45, 0.35);
+  border-color: var(--c-primary-light);
+  box-shadow: 4px 4px 0px var(--c-primary-dark);
 }
 .btn--primary:hover {
   background: var(--c-primary-light);
-  box-shadow: 0 0 40px rgba(2, 89, 45, 0.55);
-  transform: translateY(-2px);
+  box-shadow: 2px 2px 0px var(--c-primary-dark);
+  transform: translate(2px, 2px);
 }
 .btn--outline {
   background: transparent;
   color: var(--c-text);
-  border: 1px solid var(--c-border);
+  border: 1.5px solid var(--c-border);
+  box-shadow: 4px 4px 0px rgba(2, 89, 45, 0.2);
 }
 .btn--outline:hover {
   border-color: var(--c-primary);
   color: var(--c-white);
-  transform: translateY(-2px);
+  box-shadow: 2px 2px 0px rgba(2, 89, 45, 0.2);
+  transform: translate(2px, 2px);
 }
 .btn--ghost {
   background: rgba(2, 89, 45, 0.1);
-  color: #4ade80;
-  border: 1px solid rgba(2, 89, 45, 0.3);
+  color: var(--c-text-dim);
+  border: 1.5px solid rgba(2, 89, 45, 0.3);
+  box-shadow: 3px 3px 0px rgba(2, 89, 45, 0.08);
 }
 .btn--ghost:hover {
   background: rgba(2, 89, 45, 0.2);
-  transform: translateY(-2px);
+  box-shadow: 1px 1px 0px rgba(2, 89, 45, 0.08);
+  transform: translate(2px, 2px);
 }
 
 /* DIVIDER LINE */
@@ -228,11 +226,12 @@ body::before {
 /* CARD BASE */
 .card {
   background: var(--c-surface-2);
-  border: 1px solid var(--c-border);
-  border-radius: var(--radius-md);
-  transition: var(--transition);
+  border: 1.5px solid var(--c-border);
+  border-radius: 0;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
   position: relative;
   overflow: hidden;
+  box-shadow: 4px 4px 0px var(--c-primary-dark);
 }
 .card::before {
   content: '';
@@ -242,19 +241,19 @@ body::before {
   background-size: 8px 8px;
   pointer-events: none;
   z-index: 1;
-  transition: var(--transition);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .card:hover::before {
-  background-image: radial-gradient(rgba(74, 222, 128, 0.1) 1px, transparent 1px);
+  background-image: radial-gradient(rgba(26, 89, 43, 0.2) 1px, transparent 1px);
 }
 .card > * {
   position: relative;
   z-index: 2;
 }
 .card:hover {
-  border-color: rgba(74, 222, 128, 0.4);
-  transform: translateY(-4px);
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+  border-color: var(--c-primary-light);
+  transform: translate(-3px, -3px);
+  box-shadow: 7px 7px 0px var(--c-primary);
 }
 
 /* GLOW TEXT */

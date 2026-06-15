@@ -10,15 +10,27 @@
   padding: calc(var(--nav-h) + 60px) 0 80px;
 }
 
+@keyframes float-blob {
+  0%, 100% {
+    transform: translate(-50%, 0%) scale(1) rotate(0deg);
+  }
+  33% {
+    transform: translate(-45%, -5%) scale(1.1) rotate(120deg);
+  }
+  66% {
+    transform: translate(-55%, -10%) scale(0.9) rotate(240deg);
+  }
+}
 .hero__bg-radial {
   position: absolute;
   top: -200px;
   left: 50%;
-  transform: translateX(-50%);
   width: 1000px;
-  height: 700px;
-  background: radial-gradient(ellipse at center, rgba(2, 89, 45, 0.18) 0%, transparent 65%);
+  height: 800px;
+  background: radial-gradient(ellipse at center, rgba(2, 89, 45, 0.22) 0%, transparent 65%);
   pointer-events: none;
+  filter: blur(60px);
+  animation: float-blob 18s infinite ease-in-out;
 }
 
 /* DECORATIVE LINES */
@@ -62,7 +74,7 @@
 
 .hero__title {
   font-family: var(--font-display);
-  font-size: clamp(72px, 14vw, 160px);
+  font-size: clamp(54px, 12vw, 150px);
   line-height: 0.88;
   letter-spacing: -2px;
   margin-bottom: 24px;
@@ -70,18 +82,24 @@
 .hero__title-jhmun {
   color: var(--c-primary);
   display: block;
+  text-shadow: 0 0 40px rgba(2, 89, 45, 0.4);
 }
 .hero__title-colon {
-  color: var(--c-primary);
+  color: var(--c-primary-light);
 }
 .hero__title-bokaro {
   color: var(--c-white);
   display: block;
+  letter-spacing: 2px;
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
 }
 .hero__title-chapter {
   display: block;
-  color: var(--c-text-dim);
-  font-size: clamp(52px, 10vw, 110px);
+  color: transparent;
+  -webkit-text-stroke: 1px var(--c-border);
+  font-size: clamp(38px, 8vw, 100px);
+  letter-spacing: 4px;
+  margin-top: 8px;
 }
 
 .hero__venue {
@@ -613,13 +631,32 @@
   .reg-step::after { display: none; }
 }
 @media (max-width: 640px) {
+  .hero { padding: calc(var(--nav-h) + 40px) 0 60px; }
   .committees-grid { grid-template-columns: 1fr; }
-  .countdown__grid { gap: 10px; }
-  .countdown__block { min-width: 64px; padding: 12px 8px; }
-  .countdown__num { font-size: 30px; }
+  .countdown__grid { gap: 8px; }
+  .countdown__block { min-width: 58px; padding: 10px 6px; }
+  .countdown__num { font-size: 26px; }
   .register-banner__inner { flex-direction: column; gap: 40px; }
-  .stats-bar__inner { justify-content: center; }
-  .hero__actions { flex-direction: column; align-items: center; }
+  .stats-bar__inner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px 10px;
+    justify-items: center;
+  }
+  .stats-bar__item:last-child {
+    grid-column: span 2;
+  }
+  .hero__actions { 
+    flex-direction: column; 
+    align-items: stretch;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto 40px;
+  }
+  .hero__actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
   .why-grid { grid-template-columns: 1fr; }
   .reg-steps { grid-template-columns: 1fr; }
 }

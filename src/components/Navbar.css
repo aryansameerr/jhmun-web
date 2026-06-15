@@ -201,7 +201,7 @@
 .mobile-drawer__inner {
   display: flex;
   flex-direction: column;
-  padding: 32px 24px;
+  padding: 24px 16px;
   gap: 4px;
 }
 .mobile-drawer__inner a {

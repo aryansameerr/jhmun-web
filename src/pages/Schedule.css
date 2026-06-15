@@ -5,8 +5,8 @@
   margin-top: 24px;
   padding: 12px 20px;
   background: rgba(74, 222, 128, 0.06);
-  border: 1px solid rgba(74, 222, 128, 0.2);
-  border-radius: var(--radius-sm);
+  border: 2px solid rgba(74, 222, 128, 0.2);
+  border-radius: 0;
   font-family: var(--font-ui);
   font-size: 13px;
   color: var(--c-text-dim);
@@ -36,7 +36,7 @@
   display: grid;
   grid-template-columns: 100px 1fr;
   gap: 24px;
-  align-items: flex-start;
+  align-items: stretch;
 }
 .schedule-item__time {
   display: flex;
@@ -45,6 +45,7 @@
   text-align: center;
   gap: 8px;
   padding-top: 18px;
+  position: relative;
 }
 .schedule-item__time span {
   font-family: var(--font-display);
@@ -61,16 +62,16 @@
   box-shadow: 0 0 8px currentColor;
 }
 .schedule-item__line {
+  position: absolute;
+  top: 54px;
+  bottom: -16px;
   width: 2px;
-  flex: 1;
-  min-height: 40px;
   background: var(--c-border);
-  border-radius: 2px;
 }
 .schedule-item__content {
   background: var(--item-bg);
-  border: 1px solid var(--item-border);
-  border-radius: var(--radius-md);
+  border: 2px solid var(--item-border);
+  border-radius: 0;
   padding: 20px 24px;
   margin-bottom: 16px;
   transition: var(--transition);

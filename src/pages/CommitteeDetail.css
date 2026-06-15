@@ -74,9 +74,9 @@
   width: 100%;
   aspect-ratio: 4 / 5;
   border-radius: 0;
-  border: 1.5px solid var(--c-border);
+  border: 2px solid var(--c-border);
   overflow: hidden;
-  box-shadow: 4px 4px 0px var(--c-primary-dark);
+  box-shadow: 5px 5px 0px var(--c-black);
   background: var(--c-primary-dark);
 }
 
@@ -125,7 +125,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 14px 20px;
-  border-bottom: 1px solid var(--c-border);
+  border-bottom: 2px solid var(--c-border);
 }
 .cd-info-row--last { border-bottom: none; }
 .cd-info-label {
@@ -156,8 +156,8 @@
   gap: 24px;
   align-items: start;
   background: var(--c-surface-2);
-  border: 1px solid var(--c-border);
-  border-radius: var(--radius-md);
+  border: 2px solid var(--c-border);
+  border-radius: 0;
   padding: 28px;
   transition: var(--transition);
 }
@@ -192,11 +192,11 @@
 }
 .chair-card {
   background: var(--c-surface-2);
-  border: 1.5px solid var(--c-border);
+  border: 2px solid var(--c-border);
   border-radius: 0;
   overflow: hidden;
   transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-  box-shadow: 4px 4px 0px var(--c-primary-dark);
+  box-shadow: 5px 5px 0px var(--c-black);
 }
 .chair-card:hover {
   border-color: var(--c-primary-light);
@@ -227,8 +227,8 @@
   top: 12px;
   right: 12px;
   background: rgba(0,0,0,0.8);
-  border: 1px solid var(--c-border);
-  border-radius: 100px;
+  border: 2px solid var(--c-border);
+  border-radius: 0;
   padding: 3px 10px;
   font-family: var(--font-ui);
   font-size: 10px;
@@ -269,8 +269,8 @@
   gap: 10px;
   padding: 14px 20px;
   background: rgba(2, 89, 45, 0.06);
-  border: 1px solid rgba(2, 89, 45, 0.2);
-  border-radius: var(--radius-sm);
+  border: 2px solid rgba(2, 89, 45, 0.2);
+  border-radius: 0;
   font-family: var(--font-ui);
   font-size: 13px;
   color: var(--c-text-dim);
@@ -283,8 +283,8 @@
   align-items: center;
   gap: 24px;
   background: var(--c-surface-2);
-  border: 1px solid var(--c-border);
-  border-radius: var(--radius-md);
+  border: 2px solid var(--c-border);
+  border-radius: 0;
   padding: 28px;
   max-width: 720px;
 }
@@ -304,8 +304,8 @@
 }
 .cd-bg-guide__badge {
   background: rgba(115, 115, 115, 0.1);
-  border: 1px solid rgba(115, 115, 115, 0.3);
-  border-radius: 100px;
+  border: 2px solid rgba(115, 115, 115, 0.3);
+  border-radius: 0;
   padding: 6px 14px;
   font-family: var(--font-ui);
   font-size: 11px;
@@ -328,7 +328,7 @@
   gap: 16px;
   padding: 18px 20px;
   background: var(--c-surface-2);
-  border: 1.5px solid var(--c-border);
+  border: 2px solid var(--c-border);
   border-radius: 0;
   transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
   box-shadow: 3px 3px 0px var(--c-primary-dark);

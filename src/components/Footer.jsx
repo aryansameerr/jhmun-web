@@ -29,13 +29,13 @@ export default function Footer() {
         <div className="footer__top">
           {/* BRAND COLUMN */}
           <div className="footer__brand">
-            <div className="footer__brand-header">
+            <Link to="/" className="footer__brand-header">
               <img src="/jhmun-logo-green.png" alt="JHMUN Logo" className="footer__logo" />
               <div>
                 <span className="footer__name">JHMUN</span>
                 <span className="footer__tagline">Bokaro Chapter · 3rd Edition</span>
               </div>
-            </div>
+            </Link>
             
             <p className="footer__desc">
               Jharkhand Model United Nations is the state's premier youth leadership assembly, fostering diplomacy, critical inquiry, and geopolitical consensus.

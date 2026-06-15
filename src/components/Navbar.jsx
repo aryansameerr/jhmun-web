@@ -36,7 +36,7 @@ export default function Navbar() {
   return (
     <>
       <nav className={`navbar${scrolled ? ' navbar--scrolled' : ''}`}>
-        <div className="navbar__inner container--wide">
+        <div className="navbar__inner container">
           {/* LOGO */}
           <Link to="/" className="navbar__logo">
             <img src="/jhmun-logo-green.png" alt="JHMUN Logo" />

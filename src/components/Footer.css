@@ -261,7 +261,7 @@
   height: 32px;
   background: var(--c-primary);
   color: var(--c-white);
-  border-radius: 4px;
+  border-radius: 0;
   transition: all var(--transition-fast);
 }
 

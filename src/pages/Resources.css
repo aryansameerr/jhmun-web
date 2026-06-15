@@ -11,11 +11,12 @@
   padding: 32px;
   gap: 16px;
   background: var(--c-surface-2);
-  border: 1px solid var(--c-border);
-  border-radius: var(--radius-lg);
+  border: 2px solid var(--c-border);
+  border-radius: 0;
   position: relative;
   overflow: hidden;
   transition: var(--transition);
+  box-shadow: 6px 6px 0px var(--c-black);
 }
 
 .handbook-card__badge {
@@ -29,17 +30,17 @@
   text-transform: uppercase;
   color: #4ade80;
   background: rgba(74, 222, 128, 0.1);
-  border: 1px solid rgba(74, 222, 128, 0.3);
+  border: 2px solid rgba(74, 222, 128, 0.3);
   padding: 4px 10px;
-  border-radius: 100px;
+  border-radius: 0;
 }
 
 .handbook-card__icon {
   width: 48px;
   height: 48px;
-  border-radius: var(--radius-sm);
+  border-radius: 0;
   background: rgba(2, 89, 45, 0.15);
-  border: 1px solid rgba(2, 89, 45, 0.4);
+  border: 2px solid rgba(2, 89, 45, 0.4);
   color: #4ade80;
   display: flex;
   align-items: center;
@@ -75,16 +76,16 @@
   gap: 20px;
   padding: 24px;
   background: var(--c-surface-2);
-  border: 1px solid var(--c-border);
-  border-radius: var(--radius-md);
+  border: 2px solid var(--c-border);
+  border-radius: 0;
 }
 
 .search-box {
   display: flex;
   align-items: center;
   background: rgba(0, 0, 0, 0.25);
-  border: 1px solid var(--c-border);
-  border-radius: var(--radius-sm);
+  border: 2px solid var(--c-border);
+  border-radius: 0;
   padding: 6px 16px;
   transition: all var(--transition-fast);
 }
@@ -124,12 +125,12 @@
 
 .filter-tab {
   padding: 8px 16px;
-  border-radius: var(--radius-sm);
+  border-radius: 0;
   font-family: var(--font-ui);
   font-size: 12px;
   font-weight: 500;
   color: var(--c-text-dim);
-  border: 1px solid var(--c-border);
+  border: 2px solid var(--c-border);
   background: transparent;
   transition: all var(--transition-fast);
   cursor: pointer;
@@ -161,18 +162,19 @@
   padding: 24px;
   gap: 12px;
   background: var(--c-surface-2);
-  border: 1px solid var(--c-border);
-  border-radius: var(--radius-md);
+  border: 2px solid var(--c-border);
+  border-radius: 0;
   transition: var(--transition);
   cursor: pointer;
   position: relative;
   overflow: hidden;
+  box-shadow: 4px 4px 0px var(--c-black);
 }
 
 .resource-card:hover {
   border-color: rgba(74, 222, 128, 0.35);
-  transform: translateY(-4px);
-  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.4);
+  transform: translate(-3px, -3px);
+  box-shadow: 7px 7px 0px var(--c-primary);
 }
 
 .resource-card__header {
@@ -221,8 +223,8 @@
   color: var(--c-text-dim);
   font-size: 14px;
   background: var(--c-surface-2);
-  border: 1px solid var(--c-border);
-  border-radius: var(--radius-md);
+  border: 2px solid var(--c-border);
+  border-radius: 0;
 }
 
 /* Rules of Procedure Cheat-Sheet Table */
@@ -230,9 +232,9 @@
   width: 100%;
   overflow-x: auto;
   background: var(--c-surface-2);
-  border: 1px solid var(--c-border);
-  border-radius: var(--radius-lg);
-  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.4);
+  border: 2px solid var(--c-border);
+  border-radius: 0;
+  box-shadow: 6px 6px 0px var(--c-black);
 }
 
 .rop-table {
@@ -245,7 +247,7 @@
 .rop-table th, 
 .rop-table td {
   padding: 16px 24px;
-  border-bottom: 1px solid var(--c-border);
+  border-bottom: 2px solid var(--c-border);
   vertical-align: middle;
 }
 
@@ -294,19 +296,19 @@
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  border-radius: 4px;
+  border-radius: 0;
 }
 
 .interrupt-badge--yes {
   background: rgba(239, 68, 68, 0.1);
   color: #f87171;
-  border: 1px solid rgba(239, 68, 68, 0.25);
+  border: 2px solid rgba(239, 68, 68, 0.25);
 }
 
 .interrupt-badge--no {
   background: rgba(115, 115, 115, 0.15);
   color: var(--c-text-dim);
-  border: 1px solid rgba(115, 115, 115, 0.25);
+  border: 2px solid rgba(115, 115, 115, 0.25);
 }
 
 /* Committee specific */
@@ -318,19 +320,20 @@
 
 .committee-resource-card {
   background: var(--c-surface-2);
-  border: 1px solid var(--c-border);
-  border-radius: var(--radius-md);
+  border: 2px solid var(--c-border);
+  border-radius: 0;
   padding: 24px;
   display: flex;
   flex-direction: column;
   gap: 16px;
   transition: var(--transition);
+  box-shadow: 5px 5px 0px var(--c-black);
 }
 
 .committee-resource-card:hover {
   border-color: rgba(74, 222, 128, 0.35);
-  transform: translateY(-4px);
-  box-shadow: 0 12px 36px rgba(0,0,0,0.4);
+  transform: translate(-3px, -3px);
+  box-shadow: 8px 8px 0px var(--c-primary);
 }
 
 .committee-resource-card__header {
@@ -408,9 +411,10 @@
   grid-template-columns: 1fr 2fr;
   gap: 80px;
   background: var(--c-surface-2);
-  border: 1px solid var(--c-border);
-  border-radius: var(--radius-lg);
+  border: 2px solid var(--c-border);
+  border-radius: 0;
   padding: 48px;
+  box-shadow: 6px 6px 0px var(--c-black);
 }
 
 .position-paper-guide__title {

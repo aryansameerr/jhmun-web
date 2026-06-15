@@ -109,7 +109,7 @@ export default function Home() {
 
       {/* ══ STATS ═════════════════════════════════════════════════ */}
       <section className="stats-bar">
-        <div className="container--wide stats-bar__inner">
+        <div className="container stats-bar__inner">
           {[
             { num: '3rd', label: 'Edition' },
             { num: '6',   label: 'Committees' },

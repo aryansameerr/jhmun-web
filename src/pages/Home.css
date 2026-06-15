@@ -114,7 +114,7 @@
   letter-spacing: 1px;
   color: var(--c-text-dim);
   margin-bottom: 24px;
-  border: 1.5px solid var(--c-border);
+  border: 2px solid var(--c-border);
   padding: 10px 20px;
   border-radius: 0;
   background: rgba(2, 89, 45, 0.08);
@@ -180,7 +180,7 @@
   align-items: center;
   min-width: 76px;
   background: var(--c-surface-2);
-  border: 1.5px solid var(--c-border);
+  border: 2px solid var(--c-border);
   border-radius: 0;
   padding: 16px 12px;
   gap: 6px;
@@ -239,8 +239,8 @@
 /* ─── STATS BAR ──────────────────────────────────────────────────── */
 .stats-bar {
   background: var(--c-surface-2);
-  border-top: 1px solid var(--c-border);
-  border-bottom: 1px solid var(--c-border);
+  border-top: 2px solid var(--c-border);
+  border-bottom: 2px solid var(--c-border);
   padding: 24px 0;
 }
 .stats-bar__inner {
@@ -288,9 +288,10 @@
 .about-teaser__card {
   position: relative;
   background: var(--c-surface-2);
-  border: 1px solid var(--c-border);
-  border-radius: var(--radius-lg);
+  border: 2px solid var(--c-border);
+  border-radius: 0;
   overflow: hidden;
+  box-shadow: 6px 6px 0px var(--c-black);
 }
 .about-teaser__card-accent {
   position: absolute;
@@ -362,7 +363,7 @@
 .committee-card {
   position: relative;
   background: var(--c-surface-2);
-  border: 1.5px solid var(--c-border);
+  border: 2px solid var(--c-border);
   border-radius: 0;
   padding: 0;
   display: flex;
@@ -391,7 +392,7 @@
   aspect-ratio: 16 / 10;
   overflow: hidden;
   background: var(--c-primary-dark);
-  border-bottom: 1px solid var(--c-border);
+  border-bottom: 2px solid var(--c-border);
   z-index: 2;
 }
 .committee-card__poster {
@@ -467,7 +468,7 @@
   line-height: 1.6;
   color: var(--c-text-dim);
   flex: 1;
-  border-top: 1px solid var(--c-border);
+  border-top: 2px solid var(--c-border);
   padding-top: 12px;
   margin-top: 4px;
 }
@@ -488,8 +489,8 @@
 .register-banner {
   position: relative;
   background: var(--c-surface-2);
-  border-top: 1px solid var(--c-border);
-  border-bottom: 1px solid var(--c-border);
+  border-top: 2px solid var(--c-border);
+  border-bottom: 2px solid var(--c-border);
   overflow: hidden;
   padding: 80px 0;
 }

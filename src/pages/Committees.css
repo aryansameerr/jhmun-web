@@ -7,7 +7,7 @@
 .committee-full-card {
   position: relative;
   background: var(--c-surface-2);
-  border: 1.5px solid var(--c-border);
+  border: 2px solid var(--c-border);
   border-radius: 0;
   padding: 24px;
   display: grid;
@@ -16,7 +16,7 @@
   transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
   overflow: hidden;
   cursor: pointer;
-  box-shadow: 4px 4px 0px var(--c-primary-dark);
+  box-shadow: 6px 6px 0px var(--c-black);
 }
 
 .committee-full-card::before {
@@ -31,7 +31,7 @@
 .committee-full-card:hover {
   border-color: var(--c-primary-light);
   transform: translate(-3px, -3px);
-  box-shadow: 7px 7px 0px var(--c-primary);
+  box-shadow: 9px 9px 0px var(--c-primary);
 }
 
 /* Poster Styling */
@@ -39,12 +39,12 @@
   position: relative;
   width: 100%;
   aspect-ratio: 4 / 5;
-  border-radius: var(--radius-md);
-  border: 1px solid var(--c-border);
+  border-radius: 0;
+  border: 2px solid var(--c-border);
   overflow: hidden;
   background: var(--c-primary-dark);
   z-index: 2;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+  box-shadow: 3px 3px 0px var(--c-black);
 }
 
 .committee-full-card__poster {
@@ -125,7 +125,7 @@
   font-family: var(--font-ui);
 }
 .committee-full-card__divider {
-  height: 1px;
+  height: 2px;
   background: var(--c-border);
   margin: 4px 0;
 }

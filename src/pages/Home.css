@@ -68,7 +68,7 @@
   margin-bottom: 24px;
 }
 .hero__title-jhmun {
-  color: #4ade80;
+  color: var(--c-primary);
   display: block;
 }
 .hero__title-colon {

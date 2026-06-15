@@ -47,7 +47,7 @@
   font-family: var(--font-display);
   font-size: 20px;
   letter-spacing: 3px;
-  color: var(--c-white);
+  color: var(--c-primary);
 }
 .navbar__logo-sub {
   font-family: var(--font-ui);

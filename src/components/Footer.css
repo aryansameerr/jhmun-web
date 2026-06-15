@@ -60,7 +60,7 @@
   font-family: var(--font-display);
   font-size: 28px;
   letter-spacing: 3px;
-  color: var(--c-white);
+  color: var(--c-primary);
   line-height: 1;
 }
 

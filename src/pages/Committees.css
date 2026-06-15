@@ -184,7 +184,7 @@
     padding: 20px;
   }
   .committee-full-card__poster-wrap {
-    max-width: 240px;
-    margin: 0 auto;
+    max-width: 100%;
+    aspect-ratio: 1.2 / 1;
   }
 }

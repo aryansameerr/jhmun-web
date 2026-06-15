@@ -73,10 +73,10 @@
   position: relative;
   width: 100%;
   aspect-ratio: 4 / 5;
-  border-radius: var(--radius-md);
-  border: 1px solid var(--c-border);
+  border-radius: 0;
+  border: 1.5px solid var(--c-border);
   overflow: hidden;
-  box-shadow: 0 16px 40px rgba(0,0,0,0.6);
+  box-shadow: 4px 4px 0px var(--c-primary-dark);
   background: var(--c-primary-dark);
 }
 
@@ -419,7 +419,10 @@
   }
   .cd-3col__left {
     grid-column: span 1;
-    max-width: 260px;
+    max-width: 100%;
+  }
+  .cd-poster-card {
+    aspect-ratio: 1.2 / 1;
   }
   .cd-3col__mid {
     grid-column: span 1;

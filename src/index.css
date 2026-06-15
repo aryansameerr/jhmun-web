@@ -264,7 +264,7 @@ body::before {
 /* RESPONSIVE */
 @media (max-width: 768px) {
   .section { padding: 64px 0; }
-  .container { padding: 0 16px; }
+  .container, .container--wide { padding: 0 16px; }
 }
 
 /* ─── EXTRA TEXTURE CLASSES ─────────────────────────────────────── */

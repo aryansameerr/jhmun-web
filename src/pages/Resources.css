@@ -1,0 +1,498 @@
+/* Handbooks Grid */
+.handbook-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.handbook-card {
+  display: flex;
+  flex-direction: column;
+  padding: 32px;
+  gap: 16px;
+  background: var(--c-surface-2);
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius-lg);
+  position: relative;
+  overflow: hidden;
+  transition: var(--transition);
+}
+
+.handbook-card__badge {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  font-family: var(--font-ui);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #4ade80;
+  background: rgba(74, 222, 128, 0.1);
+  border: 1px solid rgba(74, 222, 128, 0.3);
+  padding: 4px 10px;
+  border-radius: 100px;
+}
+
+.handbook-card__icon {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-sm);
+  background: rgba(2, 89, 45, 0.15);
+  border: 1px solid rgba(2, 89, 45, 0.4);
+  color: #4ade80;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.handbook-card__title {
+  font-family: var(--font-ui);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--c-white);
+  line-height: 1.3;
+}
+
+.handbook-card__desc {
+  font-size: 13.5px;
+  line-height: 1.6;
+  color: var(--c-text-dim);
+}
+
+.handbook-card__btn {
+  margin-top: auto;
+  width: 100%;
+  justify-content: center;
+  font-size: 13px;
+  padding: 12px 20px;
+}
+
+/* Reference Library Control Deck */
+.library-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 24px;
+  background: var(--c-surface-2);
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius-md);
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.25);
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius-sm);
+  padding: 6px 16px;
+  transition: all var(--transition-fast);
+}
+
+.search-box:focus-within {
+  border-color: rgba(74, 222, 128, 0.5);
+  box-shadow: 0 0 16px rgba(74, 222, 128, 0.1);
+  background: rgba(0, 0, 0, 0.35);
+}
+
+.search-box__icon {
+  font-size: 16px;
+  margin-right: 12px;
+  opacity: 0.6;
+}
+
+.search-box__input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: var(--c-white);
+  font-size: 14px;
+  padding: 6px 0;
+  font-family: inherit;
+}
+
+.search-box__input::placeholder {
+  color: var(--c-muted);
+}
+
+.filter-tabs {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.filter-tab {
+  padding: 8px 16px;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-ui);
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--c-text-dim);
+  border: 1px solid var(--c-border);
+  background: transparent;
+  transition: all var(--transition-fast);
+  cursor: pointer;
+}
+
+.filter-tab:hover {
+  border-color: rgba(74, 222, 128, 0.3);
+  color: var(--c-white);
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.filter-tab--active {
+  background: var(--c-primary) !important;
+  border-color: var(--c-primary) !important;
+  color: var(--c-white) !important;
+  box-shadow: 0 0 16px rgba(2, 89, 45, 0.4);
+}
+
+/* Resources Cards Grid */
+.resources-categories {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.resource-card {
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  gap: 12px;
+  background: var(--c-surface-2);
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius-md);
+  transition: var(--transition);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.resource-card:hover {
+  border-color: rgba(74, 222, 128, 0.35);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.4);
+}
+
+.resource-card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.resource-card__type-badge {
+  font-family: var(--font-ui);
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--c-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.resource-card__arrow {
+  color: var(--c-muted);
+  transition: all var(--transition-fast);
+}
+
+.resource-card:hover .resource-card__arrow {
+  color: #4ade80;
+  transform: translate(2px, -2px);
+}
+
+.resource-card__title {
+  font-family: var(--font-ui);
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--c-white);
+  line-height: 1.4;
+}
+
+.resource-card__desc {
+  font-size: 13px;
+  line-height: 1.55;
+  color: var(--c-text-dim);
+}
+
+.resources-empty {
+  grid-column: span 3;
+  padding: 64px 24px;
+  text-align: center;
+  color: var(--c-text-dim);
+  font-size: 14px;
+  background: var(--c-surface-2);
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius-md);
+}
+
+/* Rules of Procedure Cheat-Sheet Table */
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  background: var(--c-surface-2);
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.4);
+}
+
+.rop-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 14px;
+}
+
+.rop-table th, 
+.rop-table td {
+  padding: 16px 24px;
+  border-bottom: 1px solid var(--c-border);
+  vertical-align: middle;
+}
+
+.rop-table th {
+  background: var(--c-surface-3);
+  font-family: var(--font-ui);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #4ade80;
+}
+
+.rop-table tr:last-child td {
+  border-bottom: none;
+}
+
+.rop-table tr:hover td {
+  background: rgba(74, 222, 128, 0.015);
+}
+
+.rop-table__motion {
+  font-weight: 700;
+  color: var(--c-white);
+  font-family: var(--font-ui);
+}
+
+.rop-table__purpose {
+  color: var(--c-text-dim);
+  line-height: 1.5;
+  min-width: 240px;
+}
+
+.rop-table__debate,
+.rop-table__vote {
+  font-family: var(--font-ui);
+  font-size: 13px;
+  color: var(--c-text-dim);
+}
+
+.interrupt-badge {
+  display: inline-block;
+  padding: 4px 10px;
+  font-family: var(--font-ui);
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-radius: 4px;
+}
+
+.interrupt-badge--yes {
+  background: rgba(239, 68, 68, 0.1);
+  color: #f87171;
+  border: 1px solid rgba(239, 68, 68, 0.25);
+}
+
+.interrupt-badge--no {
+  background: rgba(115, 115, 115, 0.15);
+  color: var(--c-text-dim);
+  border: 1px solid rgba(115, 115, 115, 0.25);
+}
+
+/* Committee specific */
+.committee-resources-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.committee-resource-card {
+  background: var(--c-surface-2);
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius-md);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  transition: var(--transition);
+}
+
+.committee-resource-card:hover {
+  border-color: rgba(74, 222, 128, 0.35);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 36px rgba(0,0,0,0.4);
+}
+
+.committee-resource-card__header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 24px;
+}
+
+.committee-resource-card__abbr {
+  font-family: var(--font-display);
+  font-size: 22px;
+  color: var(--c-white);
+  letter-spacing: 1px;
+}
+
+.committee-resource-card__type {
+  font-size: 11px;
+  color: var(--c-muted);
+  font-family: var(--font-ui);
+}
+
+.committee-resource-card__links {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex: 1;
+}
+
+.committee-resource-card__btn {
+  width: 100%;
+  justify-content: center;
+  font-size: 12px;
+  padding: 10px 16px;
+}
+
+.resource-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 12px 14px;
+  border-radius: var(--radius-sm);
+  transition: var(--transition-fast);
+  color: var(--c-text-dim);
+}
+
+.resource-link:hover {
+  background: rgba(2, 89, 45, 0.1);
+  color: var(--c-white);
+}
+
+.resource-link:hover svg {
+  color: #4ade80;
+}
+
+.resource-link__text {
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.resource-link svg {
+  color: var(--c-muted);
+  flex-shrink: 0;
+  transition: var(--transition-fast);
+}
+
+.resource-link--sm .resource-link__text {
+  font-size: 13px;
+}
+
+/* Position Paper / Harvard Methodology Guide */
+.position-paper-guide {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 80px;
+  background: var(--c-surface-2);
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius-lg);
+  padding: 48px;
+}
+
+.position-paper-guide__title {
+  font-family: var(--font-display);
+  font-size: clamp(28px, 4vw, 44px);
+  color: var(--c-white);
+  line-height: 1.05;
+}
+
+.pp-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.pp-step {
+  display: grid;
+  grid-template-columns: 48px 1fr;
+  gap: 16px;
+  align-items: start;
+}
+
+.pp-step__num {
+  font-family: var(--font-display);
+  font-size: 28px;
+  color: var(--c-primary);
+  line-height: 1.2;
+}
+
+.pp-step__title {
+  font-family: var(--font-ui);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--c-white);
+  margin-bottom: 4px;
+}
+
+.pp-step__desc {
+  font-size: 13.5px;
+  color: var(--c-text-dim);
+  line-height: 1.6;
+}
+
+/* Responsive breakdowns */
+@media (max-width: 1200px) {
+  .resources-categories {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 1024px) {
+  .handbook-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .committee-resources-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .position-paper-guide {
+    grid-template-columns: 1fr;
+    gap: 36px;
+    padding: 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .handbook-grid {
+    grid-template-columns: 1fr;
+  }
+  .resources-categories {
+    grid-template-columns: 1fr;
+  }
+  .resources-empty {
+    grid-column: span 1;
+  }
+  .committee-resources-grid {
+    grid-template-columns: 1fr;
+  }
+  .rop-table th,
+  .rop-table td {
+    padding: 12px 16px;
+  }
+  .rop-table {
+    font-size: 13px;
+  }
+}

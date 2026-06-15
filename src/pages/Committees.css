@@ -1,0 +1,189 @@
+.committees-full-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+}
+
+.committee-full-card {
+  position: relative;
+  background: var(--c-surface-2);
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 32px;
+  transition: var(--transition);
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.committee-full-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 90% 10%, rgba(74, 222, 128, 0.04), transparent 60%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.committee-full-card:hover {
+  border-color: rgba(74, 222, 128, 0.35);
+  transform: translateY(-6px);
+  box-shadow: 0 28px 72px rgba(0, 0, 0, 0.6);
+}
+
+/* Poster Styling */
+.committee-full-card__poster-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--c-border);
+  overflow: hidden;
+  background: var(--c-primary-dark);
+  z-index: 2;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+}
+
+.committee-full-card__poster {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  filter: grayscale(100%) contrast(125%) brightness(0.7);
+  mix-blend-mode: luminosity;
+}
+
+.committee-full-card:hover .committee-full-card__poster {
+  filter: grayscale(0%) contrast(100%) brightness(1);
+  mix-blend-mode: normal;
+  transform: scale(1.04);
+}
+
+.committee-full-card__poster-dots {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(rgba(74, 222, 128, 0.25) 1px, transparent 1px);
+  background-size: 8px 8px;
+  pointer-events: none;
+  z-index: 3;
+  mix-blend-mode: overlay;
+  transition: var(--transition);
+}
+
+.committee-full-card:hover .committee-full-card__poster-dots {
+  opacity: 0.4;
+}
+
+.committee-full-card__poster-glow {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, transparent 60%, rgba(2, 89, 45, 0.4));
+  pointer-events: none;
+  z-index: 4;
+}
+
+.committee-full-card__info-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  z-index: 2;
+}
+
+.committee-full-card__header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.committee-full-card__icon { font-size: 36px; flex-shrink: 0; }
+.committee-full-card__type {
+  font-family: var(--font-ui);
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--c-primary);
+  margin-bottom: 4px;
+}
+.committee-full-card__abbr {
+  font-family: var(--font-display);
+  font-size: 40px;
+  color: var(--c-white);
+  letter-spacing: 2px;
+  line-height: 1;
+}
+.committee-full-card__fullname {
+  font-family: var(--font-ui);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--c-text);
+}
+.committee-full-card__subtitle {
+  font-size: 13px;
+  color: var(--c-muted);
+  font-family: var(--font-ui);
+}
+.committee-full-card__divider {
+  height: 1px;
+  background: var(--c-border);
+  margin: 4px 0;
+}
+.committee-full-card__agenda-label {
+  font-family: var(--font-ui);
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--c-muted);
+}
+.committee-full-card__agenda-item {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+}
+.committee-full-card__agenda-num {
+  color: var(--c-primary);
+  font-weight: 700;
+  flex-shrink: 0;
+  font-family: var(--font-ui);
+  font-size: 13px;
+}
+.committee-full-card__agenda-item p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--c-text-dim);
+}
+.committee-full-card__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+  padding-top: 8px;
+}
+.committee-full-card__chairs {
+  font-family: var(--font-ui);
+  font-size: 12px;
+  color: var(--c-muted);
+}
+.committee-full-card__cta {
+  font-family: var(--font-ui);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--c-primary);
+  transition: var(--transition-fast);
+}
+.committee-full-card:hover .committee-full-card__cta {
+  color: #4ade80;
+}
+
+@media (max-width: 768px) {
+  .committees-full-grid { grid-template-columns: 1fr; gap: 24px; }
+  .committee-full-card {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 20px;
+  }
+  .committee-full-card__poster-wrap {
+    max-width: 240px;
+    margin: 0 auto;
+  }
+}
